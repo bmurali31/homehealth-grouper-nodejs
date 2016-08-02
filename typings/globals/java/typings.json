@@ -1,0 +1,8 @@
+{
+  "resolution": "main",
+  "tree": {
+    "src": "https://raw.githubusercontent.com/DefinitelyTyped/DefinitelyTyped/45bdf0b44a2e741f1bbd7789f14e1b26560cfc99/java/java.d.ts",
+    "raw": "registry:dt/java#0.7.2+20160629023413",
+    "typings": "https://raw.githubusercontent.com/DefinitelyTyped/DefinitelyTyped/45bdf0b44a2e741f1bbd7789f14e1b26560cfc99/java/java.d.ts"
+  }
+}
