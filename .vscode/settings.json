@@ -1,4 +1,21 @@
 // Place your settings in this file to overwrite default and user settings.
 {
-    "http.proxyStrictSSL": false
+    "http.proxyStrictSSL": false,
+	"files.exclude": {
+		"**/.git": true,
+		"**/.DS_Store": true,
+		"**/*.js": { "when": "$(basename).ts"},
+		"**/*.js.map": true,
+		"**/node_modules": true,
+		"**/obj" : true,
+		"**/lib" : true,
+		"**/.tscache" : true,
+		"**/.vs" : true,
+		"**/.sass-cache" : true,
+		"**/bin" : true,
+		"**/*.css": { "when": "$(basename).scss"},
+		"**/*.jsx" : {"when" : "$(basename).tsx"},
+		"**/*.jsx.map" : true,
+		"**/typings" : true
+    }
 }

@@ -2,8 +2,5 @@
   "globalDependencies": {
     "java": "registry:dt/java#0.7.2+20160629023413",
     "node": "registry:dt/node#6.0.0+20160802155038"
-  },
-  "dependencies": {
-    "es6-promise": "registry:npm/es6-promise#3.0.0+20160723033700"
   }
 }

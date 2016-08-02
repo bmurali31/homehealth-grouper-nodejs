@@ -22,9 +22,7 @@ hhps.init(configFile, ()=>{
             } else {
                 console.log(result.getHIPPSCodeSync().getCodeSync());
             }
-            
         }
-
     });    
 });
 
