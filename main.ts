@@ -13,13 +13,24 @@ let configFile = new File(path.join(__dirname, 'grouper', 'HomeHealthGrouper.pro
 
 
 hhps.init(configFile, ()=>{
-    let testData = fs.readFileSync(path.join(__dirname, 'grouper', 'test-files', 'v5216', 'XMLFile_1.XML'), 'utf8');
+    let testData = fs.readFileSync(path.join(__dirname, 'grouper', 'test-files', 'v5115', 'XMLFile_1.XML'), 'utf8');
     let scoreResult = hhps.scoreRecord(testData, (err, result)=>{
         if (!err){
             let exception = result.getExceptionSync();
             if (exception){
                 console.log(exception.getMessageSync());    
             } else {
+                let validationEdits = result.getValidationEditsSync();
+                
+                for(let i = 0; i<validationEdits.sizeSync(); i++){
+                    let validationEdit = validationEdits.getSync(i);
+                    let dataItem = validationEdit.getOasisDataItemSync();
+                    console.log(dataItem.getKeySync());
+                    console.log(dataItem.getValueSync());
+                    
+                    console.log(validationEdit.getOasisDataItemSync() + ':' + validationEdit.getEditSync());
+                }
+                //console.log(result.getValidationEditsSync());
                 console.log(result.getHIPPSCodeSync().getCodeSync());
             }
         }
